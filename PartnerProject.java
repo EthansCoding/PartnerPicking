@@ -17,15 +17,15 @@ public class PartnerProject
    //Starts up the program, does some silly little starting stuff
    public PartnerProject(String Name, int points)
    {
-      actName = Name;
-      points = actPoints;
+      this.actName = Name;
+      this.actPoints = points;
    }
    
    //begins the activity
    public void beginActivity()
    {
       this.isActivity = true;
-      availablePartners = partnerNames;
+      this.availablePartners = this.partnerNames;
       System.out.println("We are ready to rumble");
    }
    
@@ -42,23 +42,23 @@ public class PartnerProject
    {
       if (this.isActivity == true)
       {
-         int chooseInt = (int)(Math.random() * availablePartners.length);
+         int chooseInt = (int)(Math.random() * this.availablePartners.length);
          String toReturn = availablePartners[chooseInt];
          
-         String[] newAvailablePartners = new String[availablePartners.length - 1];
+         String[] newAvailablePartners = new String[this.availablePartners.length - 1];
          int j = 0;
-         for (int i = 0; i < availablePartners.length; i++) {
+         for (int i = 0; i < this.availablePartners.length; i++) {
             if (i != chooseInt) {
-               newAvailablePartners[j++] = availablePartners[i];  
+               newAvailablePartners[j++] = this.availablePartners[i];  
             }   
          }
-         availablePartners = newAvailablePartners;
+         this.availablePartners = newAvailablePartners;
          return toReturn;
       }
       else
       {
-         int chooseInt = (int)(Math.random() * partnerNames.length);
-         String toReturn = partnerNames[chooseInt];
+         int chooseInt = (int)(Math.random() * this.partnerNames.length);
+         String toReturn = this.partnerNames[chooseInt];
          return toReturn;
       }
    }
