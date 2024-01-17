@@ -1,4 +1,4 @@
-/*Completed by Ethan, while Elia was not here.
+/*Completed by Ethan, and Elia
   1/16/2024, in class partnerProject*/
 import java.util.Arrays;  
   
